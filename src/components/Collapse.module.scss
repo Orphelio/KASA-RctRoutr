@@ -1,0 +1,16 @@
+@import "../style/main.scss";
+
+.root {
+    border-radius: 5px;
+    .title {
+        background-color: $main-color;
+        color: white;
+        border-radius: 5px;
+    }
+    .content {
+        background-color: $light-grey;
+        color: $main-color;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+}
