@@ -1,0 +1,51 @@
+@import "../main.scss";
+
+.product {
+    max-width: 1440px;
+    &__content {
+        color: $main-color;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+    }
+    &__info {
+        align-items: center;
+    }
+    &__title {
+        font-size: 36px;
+        margin: auto;
+        margin-top: 30px;
+    }   
+    &__location {
+        font-size: 18px;
+        margin: auto;
+    }
+    &__tags {
+        display: flex;
+        gap: 10px;
+        font-size: 14px;  
+        margin-top: 20px; 
+        margin-bottom: 24px; 
+
+    }
+    &__rating {
+        width: min-content;
+    }
+    &__collapse {
+        display: flex;
+        gap: 96px;
+       /* :nth-child(1), :nth-child(2) {
+            width: 575px;
+            height: 52px;
+        }
+     /*   :nth-child(1) {
+            width: 582px;
+            height: 52px;
+        }
+        :nth-child(2) {
+            width: 528px;
+            height: 52px;
+        } */
+    }
+    
+}

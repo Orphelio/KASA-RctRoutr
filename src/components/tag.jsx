@@ -1,9 +1,10 @@
 import React from "react";
+import s from "./Tag.module.scss"
 
 const Tag = ({ getTag }) => {
   return (
-    <div className="tag">
-      <p className="tag__text">{getTag}</p>
+    <div className={s.tag}>
+      <p className={s.tag__text}>{getTag}</p>
     </div>
   );
 };

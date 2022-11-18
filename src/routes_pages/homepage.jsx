@@ -6,18 +6,26 @@ import image from "../img/KASA_BANNER.png";
 import products from "../datas/data.json";
 import communication from "../datas/communication";
 import Banner from "../components/banner";
-import Stickers from "../components/stickers";
+import Stickers from "../components/card";
+import Footer from "../components/footer";
+
+//import s from '../style/_pages/_homepage.scss';
+//import s from './homepage.module.scss';
+import s from "../style/_pages/_Homepage.module.scss";
 
 const slogan = communication.slogan;
 
+console.log(slogan)
+
 function Products() {
   return (
-    <div className="home">
+    <div className={s.body}>
       <Header />
-      <div className="home__banner">
+      <div className={s.home}>
+      <div className={s.home__banner}>
         <Banner image={image} title={slogan} />
       </div>{" "}
-      <section className="home__products">
+      <section className={s.home__products}>
         {products.map((product) => {
           return (
             <article key={product.id}>
@@ -28,6 +36,8 @@ function Products() {
           );
         })}
       </section>
+      </div>
+      <Footer />
     </div>
   );
 };

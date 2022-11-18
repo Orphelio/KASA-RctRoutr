@@ -3,14 +3,43 @@
 .root {
     border-radius: 5px;
     .title {
+        display: flex;
         background-color: $main-color;
         color: white;
         border-radius: 5px;
+        font-size: 24px;
+        padding: 5px;
+        align-items: center;
+        justify-content: space-between;
+        &__img {
+            width: initial ;
+            height: initial ;
+            transform: rotate(45);
+        }       
+        &__img:active {
+            transform: rotate(-135deg);
+        }      
     }
+    .title:after {
+        border-right: 4px solid;
+        border-bottom: 4px solid;
+        content: "";
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        margin: 3px;
+        transform: rotate(45deg);
+        transition: all .2s;
+
+    }
+
     .content {
+        display: flex;
+        flex-direction: column;
+        padding: 3%;
         background-color: $light-grey;
         color: $main-color;
-        border-radius: 5px;
-        font-size: 20px;
+        font-size: 24px;
+        //padding: 36px 27px 19px 18px;
     }
 }

@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import s from "./Header.module.scss";
 
-//Style
 import Logo from "../img/LOGO.png";
 
 const header = () => {
   return (
-    <nav className="nav">
+    <nav className={s.nav}>
       <Link to="/">
-        <img src={Logo} alt="Logo" className="nav__img" />
+        <img src={Logo} alt="Logo" className={s.nav__img} />
       </Link>
-      <div>
-        <Link className="nav__link" to="/">
+      <div className ={s.nav__links}>
+        <Link className={s.nav__link} to="/">
           Accueil
         </Link>
-        <Link className="nav__link" to="/about">
+        <Link className={s.nav__link} to="/about">
           À Propos
         </Link>
       </div>

@@ -1,0 +1,12 @@
+.about {
+    max-width: 1440px;
+
+    &_collapse {
+        display: grid;
+        //display: flex;
+        //flex-flow: column;
+        gap: 31px;
+        padding: 0px 100px 0px 100px;
+    }
+}
+
