@@ -1,6 +1,4 @@
 const communication = [
-  { slogan: "slogan", 
-    slogan: "Chez vous, partout et ailleurs" },
   {
     title: "Fiabilité",
     description:

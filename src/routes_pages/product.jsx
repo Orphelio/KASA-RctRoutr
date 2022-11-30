@@ -19,32 +19,44 @@ const product = () => {
   const { title, location, rating, host, equipments, description, pictures } =
     product;
 
-//    content.forEach(element => {
-//  console.log(element)
-//    });
+  //    content.forEach(element => {
+  //  console.log(element)
+  //    });
 
   return (
-    <div className={s.product}>
+    <div className={s.body}>
       <Header />
-      <Carousel slides={pictures} />
-      <div className={s.product__content}>
-        <div className={s.product__info}>
-          <h1 className={s.product__title}>{title}</h1>
-          <p className={s.product__location}>{location}</p>
-          <div className={s.product__tags}>
-            {product.tags.map((tag, index) => (
-              <Tags key={index} getTag={tag} />
-            ))}
+      <div className={s.product}>
+        <Carousel slides={pictures} />
+        <div className={s.product__content}>
+          <div className={s.product__info}>
+            <h1 className={s.product__title}>{title}</h1>
+            <p className={s.product__location}>{location}</p>
+            <div className={s.product__tags}>
+              {product.tags.map((tag, index) => (
+                <Tags key={index} getTag={tag} />
+              ))}
+            </div>
+          </div>
+          <div className={s.product__rating}>
+            <Host host={host} />
+            <Rating rating={rating} />
           </div>
         </div>
-        <div className={s.product__rating}>
-          <Host host={host} />
-          <Rating rating={rating} />
+        <div className={s.product__collapse}>
+          <Collapse title="Description">
+            {" "}
+            <div className={s.product__description}>{description} </div>
+          </Collapse>
+          <Collapse title="Équipement">
+            {" "}
+            <div className={s.product__decription}>
+              {equipments.map((equipement, index) => (
+                <div key={index}>{equipement}</div>
+              ))}
+            </div>{" "}
+          </Collapse>
         </div>
-      </div>
-      <div className={s.product__collapse}>
-        <Collapse title="Description" children={description} />
-        <Collapse title="Équipement" children={equipments} />
       </div>
       <Footer />
     </div>
@@ -52,12 +64,3 @@ const product = () => {
 };
 
 export default product;
-
-/*
-      </div>
-      <div className="product__collapse">
-        <Collapse title="description" content={description} />
-        <Collapse title="équipement" content={equipments} />
-      </div>
-    </div>
-*/

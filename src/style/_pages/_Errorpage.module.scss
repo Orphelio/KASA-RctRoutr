@@ -1,0 +1,47 @@
+@import "../main.scss";
+
+.error {
+  max-width: 1240px;
+  margin: 0 auto;
+  color: $main-color;
+  @media (max-width: 992px) {
+  }
+  @media (max-width: 992px) {
+  }
+
+  &__body {
+    display: grid;
+    justify-content: center;
+  }
+  &__title {
+    font-size: 288px;
+    font-weight: 700;
+    justify-self: center;
+    margin-block: auto;
+    padding-top: 100px;
+    height: 263px;
+    width: 597px;
+    @media (max-width: 992px) {
+        font-size: 96px;
+        width: 198px;
+        height: 99px;
+    }
+  }
+  &__text {
+    font-size: 36px;
+    padding-top: 60px;
+    text-align: center;
+    @media (max-width: 992px) {
+        font-size: 18px;
+        padding-top: 11px;
+        padding-left: 57px;
+        padding-right: 57px;
+    }
+  }
+  &__link {
+    font-size: 18px;
+    color: $main-color;
+    justify-self: center;
+    padding: 140px 0 140px 0;
+  }
+}

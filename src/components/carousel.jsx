@@ -1,36 +1,39 @@
-import React from 'react';
-import {useState} from 'react';
+import React from "react";
+import { useState } from "react";
 import s from "./Carousel.module.scss";
 
 import arrowBack from "../img/arrowBack.svg";
 import arrowForward from "../img/arrowForward.svg";
 
 const Carousel = ({ slides }) => {
-	const [current, setCurrent] = useState(0);
-	const length = slides.length;
+  const [current, setCurrent] = useState(0);
+  const length = slides.length;
 
-	const nextSlide = () => {
-	  setCurrent(current === length - 1 ? 0 : current + 1);
-	};
-  
-	const prevSlide = () => {
-	  setCurrent(current === 0 ? length - 1 : current - 1);
-	};  
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
 
-return (
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+
+  return (
     <div className={s.carousel}>
       {slides.map((picture, index) => {
         return (
           <div
             key={index}
             className={
-              index === current
-                ? s.carousel__active
-                : s.carousel__inactive
+              index === current ? s.carousel__active : s.carousel__inactive
             }
           >
             {index === current && (
-              <img src={picture} alt="" className={s.carousel__img} />
+              <>
+                <img src={picture} alt="" className={s.carousel__img} />
+                <div className={s.carousel__length}>
+                  {index + 1}/{slides.length}
+                </div>
+              </>
             )}
           </div>
         );
@@ -49,5 +52,5 @@ return (
     </div>
   );
 };
-  
-  export default Carousel;
+
+export default Carousel;

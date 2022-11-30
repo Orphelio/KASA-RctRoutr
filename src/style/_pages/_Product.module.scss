@@ -1,51 +1,68 @@
 @import "../main.scss";
 
 .product {
-    max-width: 1440px;
-    &__content {
-        color: $main-color;
-        display: flex;
-        justify-content: space-between;
-        font-weight: 500;
+  max-width: 1240px;
+  margin: 0 auto;
+  @media (max-width: 992px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  &__content {
+    color: $main-color;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 992px) {
+        flex-direction: column;
+      }
+  }
+  &__info {
+    align-items: center;
+  }
+  &__title {
+    font-size: 36px;
+    margin: auto;
+    margin-top: 30px;
+    @media (max-width: 992px) {
+      font-size: 18px;
+      font-weight: 500;
     }
-    &__info {
+  }
+  &__location {
+    font-size: 18px;
+    margin: auto;
+    @media (max-width: 992px) {
+        font-size: 14px;
+      }
+  }
+  &__rating {
+    width: min-content;
+    align-self: center;
+    @media (max-width: 992px) {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
         align-items: center;
-    }
-    &__title {
-        font-size: 36px;
-        margin: auto;
-        margin-top: 30px;
-    }   
-    &__location {
-        font-size: 18px;
-        margin: auto;
-    }
-    &__tags {
-        display: flex;
-        gap: 10px;
-        font-size: 14px;  
-        margin-top: 20px; 
-        margin-bottom: 24px; 
-
-    }
-    &__rating {
-        width: min-content;
-    }
-    &__collapse {
-        display: flex;
-        gap: 96px;
-       /* :nth-child(1), :nth-child(2) {
-            width: 575px;
-            height: 52px;
-        }
-     /*   :nth-child(1) {
-            width: 582px;
-            height: 52px;
-        }
-        :nth-child(2) {
-            width: 528px;
-            height: 52px;
-        } */
-    }
+        justify-content: space-between;
+        padding-bottom: 15px;
+      }
+  }
+  &__tags {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 24px;
     
+  }
+  &__collapse {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 582px;
+    gap: 76px;
+    @media (max-width: 1240px) {
+      grid-auto-flow: row;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      }
+  }
 }

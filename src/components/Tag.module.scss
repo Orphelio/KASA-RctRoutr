@@ -14,5 +14,8 @@
         color: white;
         font-size: 14px;
         margin: 5px;
+        @media (max-width: 992px) {
+            font-size: 10px;
+          }
     }
 }

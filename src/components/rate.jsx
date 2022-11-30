@@ -9,7 +9,7 @@ const Rate = ({ rating }) => {
 
   return (
     <div className={s.rate}>
-      {/* Loop to display star by rating */}
+      {}
       {stars.map((star) =>
         rating >= star ? (
           <img

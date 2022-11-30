@@ -18,20 +18,23 @@ import Product from "./routes_pages/product";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-      <Route errorElement={<ErrorPage />}>
+      <Route 
+      path="/"
+      errorElement={<ErrorPage />}
+      >
       <Route 
           path="/" 
           index element={<Index />}
-          errorElement={<ErrorPage />} />
+           />
       <Route 
           path="/about" 
           element={<About />} 
-          errorElement={<ErrorPage />}
+          
         />  
         <Route
           path="products/:productId"
           element={<Product />}
-          errorElement={<ErrorPage />}
+          
         />
       </Route>
   
