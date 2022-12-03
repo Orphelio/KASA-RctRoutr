@@ -1,5 +1,5 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from "react";
+import ReactDOM from "react-dom/client";
 import {
   createRoutesFromElements,
   createBrowserRouter,
@@ -7,41 +7,31 @@ import {
   Route,
 } from "react-router-dom";
 //import App from './App'
-import "./style/main.scss"
-import './index.css'
+import "./style/main.scss";
+import "./index.css";
 
 import ErrorPage from "./error-page";
 import Index from "./routes_pages/homepage";
 import About from "./routes_pages/About";
 import Product from "./routes_pages/product";
 
-
 const router = createBrowserRouter(
   createRoutesFromElements(
+    <Route 
+      path="/" 
+      errorElement={<ErrorPage />}>
       <Route 
-      path="/"
-      errorElement={<ErrorPage />}
-      >
+        path="/" 
+        index element={<Index />} />
       <Route 
-          path="/" 
-          index element={<Index />}
-           />
+        path="/about" 
+        element={<About />} />
       <Route 
-          path="/about" 
-          element={<About />} 
-          
-        />  
-        <Route
-          path="products/:productId"
-          element={<Product />}
-          
-        />
-      </Route>
-  
+        path="products/:productId" 
+        element={<Product />} />
+    </Route>
   )
 );
-
-
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

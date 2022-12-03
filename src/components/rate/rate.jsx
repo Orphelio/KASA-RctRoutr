@@ -1,11 +1,12 @@
 import React from "react";
 import s from "./Rate.module.scss"
 
-import redstar from "../img/redStar.svg";
-import greystar from "../img/greyStar.svg";
+import redstar from "../../img/redStar.svg";
+import greystar from "../../img/greyStar.svg";
+
+const stars = [1, 2, 3, 4, 5];
 
 const Rate = ({ rating }) => {
-  const stars = [1, 2, 3, 4, 5];
 
   return (
     <div className={s.rate}>

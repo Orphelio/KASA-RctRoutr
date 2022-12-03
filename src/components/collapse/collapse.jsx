@@ -1,6 +1,6 @@
 import React, { useReducer, useMemo } from "react";
 import s from "./Collapse.module.scss";
-import arrowDown from "../img/arrowDown.png";
+import arrowDown from "../../img/arrowDown.png";
 
 const toggleReducer = (value) => !value;
 const Collapse = ({ children, title, show }) => {

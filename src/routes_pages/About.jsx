@@ -1,15 +1,14 @@
 import { useState } from "react";
-import Banner from "../components/Banner";
+import Banner from "../components/banner/banner";
 import content from "../datas/communication";
-import Collapse from "../components/Collapse";
+import Collapse from "../components/collapse/collapse";
 import imageBanner from "../img/aboutbannerDesktop.png";
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Header from "../components/header/header";
+import Footer from "../components/footer/footer";
 import s from "../style/_pages/_About.module.scss";
 
 function About() {
   const [count, setCount] = useState(0);
-  console.log(content);
   return (
     <div className={s.body}>
       <Header />

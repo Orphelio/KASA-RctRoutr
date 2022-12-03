@@ -1,27 +1,25 @@
-//import { useState } from "react";
 import { useParams } from "react-router-dom";
-// import { redirect } from "react-router-dom"
 
 import content from "../datas/data.json";
 
-import Header from "../components/header";
-import Host from "../components/host";
-import Rating from "../components/rate";
-import Carousel from "../components/carousel";
-import Tags from "../components/tag";
-import Collapse from "../components/Collapse";
-import Footer from "../components/footer";
+import Header from "../components/header/header";
+import Host from "../components/host/host";
+import Rating from "../components/rate/rate";
+import Carousel from "../components/carousel/carousel";
+import Tags from "../components/tag/tag";
+import Collapse from "../components/collapse/collapse";
+import Footer from "../components/footer/footer";
 import s from "../style/_pages/_Product.module.scss";
+import { useMemo } from "react";
 
 const product = () => {
   const { productId } = useParams();
-  const product = content.find((product) => product.id === productId);
   const { title, location, rating, host, equipments, description, pictures } =
-    product;
-
-  //    content.forEach(element => {
-  //  console.log(element)
-  //    });
+    useMemo(
+      () => content.find((product) => product.id === productId),
+      [productId]
+    );
+  const product = content.find((product) => product.id === productId);
 
   return (
     <div className={s.body}>
@@ -34,7 +32,7 @@ const product = () => {
             <p className={s.product__location}>{location}</p>
             <div className={s.product__tags}>
               {product.tags.map((tag, index) => (
-                <Tags key={index} getTag={tag} />
+                <Tags key={index} tag={tag} />
               ))}
             </div>
           </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import s from "./Header.module.scss";
 
-import Logo from "../img/LOGO.png";
+import Logo from "../../img/LOGO.png";
 
 const header = () => {
   return (
