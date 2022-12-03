@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./Card.module.scss";
 
-const Stickers = ({ image, title }) => {
+const Cards = ({ image, title }) => {
   return (
     <div className={s.card}>
       <img src={image} alt="" className={s.card__img} />
@@ -11,4 +11,4 @@ const Stickers = ({ image, title }) => {
   );
 };
 
-export default Stickers;
+export default Cards;

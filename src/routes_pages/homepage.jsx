@@ -5,7 +5,7 @@ import Header from "../components/header/index";
 import image from "../img/KASA_BANNER.png";
 import products from "../datas/data.json";
 import Banner from "../components/banner/index";
-import Stickers from "../components/card/index";
+import Cards from "../components/card/index";
 import Footer from "../components/footer/index";
 
 //import s from '../style/_pages/_homepage.scss';
@@ -25,7 +25,7 @@ function Products() {
             return (
               <article key={product.id}>
                 <Link to={`/products/${product.id}`}>
-                  <Stickers image={product.cover} title={product.title} />
+                  <Cards image={product.cover} title={product.title} />
                 </Link>
               </article>
             );
