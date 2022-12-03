@@ -8,8 +8,6 @@ import Banner from "../components/banner/index";
 import Cards from "../components/card/index";
 import Footer from "../components/footer/index";
 
-//import s from '../style/_pages/_homepage.scss';
-//import s from './homepage.module.scss';
 import s from "../style/_pages/_Homepage.module.scss";
 
 function Products() {

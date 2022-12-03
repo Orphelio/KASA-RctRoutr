@@ -1,9 +1,9 @@
 import React, { useMemo } from "react";
-import s from "./Host.module.scss"
+import s from "./Host.module.scss";
 
-const Host = ({ host }) => {
+const Host = ({ host, alt }) => {
   const { name, lastname } = useMemo(() => {
-    const [name, lastname] = host.name.split(' ');
+    const [name, lastname] = host.name.split(" ");
     return {
       name: name.trim(),
       lastname: lastname.trim(),
@@ -17,7 +17,7 @@ const Host = ({ host }) => {
         <p className={s.host__lastname}>{lastname}</p>
       </div>
 
-      <img src={host.picture} alt="" className={s.host__img} />
+      <img src={host.picture} alt={alt} className={s.host__img} />
     </div>
   );
 };

@@ -6,7 +6,6 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
-//import App from './App'
 import "./style/main.scss";
 import "./index.css";
 

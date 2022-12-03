@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./Tag.module.scss"
+import s from "./Tag.module.scss";
 
 const Tag = ({ tag }) => {
   return (

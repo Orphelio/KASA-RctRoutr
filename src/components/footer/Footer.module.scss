@@ -1,25 +1,25 @@
 @import "../../style/main.scss";
 
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 209px;
+  margin-top: 14px;
+  flex-direction: column;
+  background-color: black;
+  &__img {
+    width: 122px;
+    height: 40px;
+  }
+  &__text {
+    font-size: 12px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-    height: 209px;
-    margin-top: 14px;
-    flex-direction: column;
-    background-color: black;
-    &__img {
-        width: 122px;
-        height: 40px;
+    color: white;
+    @media (min-width: 992px) {
+      font-size: 24px;
     }
-    &__text {
-        font-size: 12px;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        color: white;
-        @media (min-width: 992px) {
-            font-size: 24px;
-        }
-    }
+  }
 }

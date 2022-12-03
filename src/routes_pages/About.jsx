@@ -14,7 +14,7 @@ function About() {
       <Header />
       <div className={s.about}>
         <div className={s.about__banner}>
-          <Banner image={imageBanner} title={false}/>
+          <Banner image={imageBanner} title={false} />
         </div>
         <div className={s.about__collapse}>
           {content.map(({ title, description }, index) => {

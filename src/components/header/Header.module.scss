@@ -1,50 +1,49 @@
 @import "../../style/main.scss";
 
 .nav {
-    max-width: 1240px;
-    margin: 0 auto;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 43px;
+  @media (max-width: 1240px) {
+    padding: 20px;
+  }
+
+  &__links {
     display: flex;
     justify-content: space-between;
+    width: 140px;
+    height: 17px;
+    text-transform: uppercase;
+    @media (min-width: 992px) {
+      width: 309px;
+      height: 34px;
+      text-transform: none;
+    }
+  }
+
+  &__link {
+    display: flex;
     align-items: center;
-    padding-top: 40px;
-    padding-bottom: 43px;
-    @media (max-width: 1240px) {
-        padding: 20px;  
-        
+    justify-content: space-evenly;
+    color: $main-color;
+    text-decoration: none;
+    font-size: 12px;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
     }
-
-    &__links {
-        display: flex;
-        justify-content: space-between;
-        width: 140px;
-        height: 17px;
-        text-transform: uppercase;
-        @media (min-width: 992px) {
-            width: 309px;
-            height: 34px;
-            text-transform: none;
-        }
+    @media (min-width: 992px) {
+      font-size: 24px;
     }
-
-    &__link {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        color: $main-color;
-        text-decoration: none;
-        font-size: 12px;
-        &:hover {
-            text-decoration: underline;
-            text-decoration-thickness: 1px;
-        }
-        @media (min-width: 992px) {
-            font-size: 24px;
-                }
+  }
+  &__img {
+    height: 47px;
+    @media (min-width: 992px) {
+      height: 68px;
     }
-    &__img {
-        height: 47px;
-        @media (min-width: 992px) {
-            height: 68px;
-        }
-    }
+  }
 }

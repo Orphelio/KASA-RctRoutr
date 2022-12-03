@@ -3,7 +3,7 @@ import s from "./Collapse.module.scss";
 import arrowDown from "../../img/arrowDown.png";
 
 const toggleReducer = (value) => !value;
-const Collapse = ({ children, title, show }) => {
+const Collapse = ({ children, title, alt, show }) => {
   const [isShow, toggle] = useReducer(toggleReducer, !!show);
   const memoColl = useMemo(() => {
     if (isShow)
@@ -17,7 +17,7 @@ const Collapse = ({ children, title, show }) => {
     <div className={s.collapse}>
       <div className={memoColl} onClick={toggle}>
         {title}
-        <img src={arrowDown} alt="" className={s.title__img} />
+        <img src={arrowDown} alt={alt} className={s.title__img} />
       </div>
       {isShow && <div className={s.content}>{children}</div>}
     </div>

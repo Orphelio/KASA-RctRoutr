@@ -16,7 +16,7 @@
     justify-content: space-between;
     @media (max-width: 1240px) {
       font-size: 13px;
-      }
+    }
     &__open {
       img {
         transform: rotate(-180deg);
@@ -30,7 +30,7 @@
       transform: rotate(45);
       @media (max-width: 720px) {
         height: 50%;
-        }
+      }
     }
   }
 
@@ -49,8 +49,6 @@
     @media (max-width: 992px) {
       font-size: 12px;
       padding: 20px 6px 5px 6px;
-      }
-
-    //padding: 36px 27px 19px 18px;
+    }
   }
 }

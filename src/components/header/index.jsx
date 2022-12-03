@@ -4,13 +4,13 @@ import s from "./Header.module.scss";
 
 import Logo from "../../img/LOGO.png";
 
-const header = () => {
+const header = ({ alt }) => {
   return (
     <nav className={s.nav}>
       <Link to="/">
-        <img src={Logo} alt="Logo" className={s.nav__img} />
+        <img src={Logo} alt={alt} className={s.nav__img} />
       </Link>
-      <div className ={s.nav__links}>
+      <div className={s.nav__links}>
         <Link className={s.nav__link} to="/">
           Accueil
         </Link>
