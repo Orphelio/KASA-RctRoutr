@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Header from "../components/header/header";
+import Header from "../components/header/index";
 import image from "../img/KASA_BANNER.png";
 import products from "../datas/data.json";
-import Banner from "../components/banner/banner";
-import Stickers from "../components/card/card";
-import Footer from "../components/footer/footer";
+import Banner from "../components/banner/index";
+import Stickers from "../components/card/index";
+import Footer from "../components/footer/index";
 
 //import s from '../style/_pages/_homepage.scss';
 //import s from './homepage.module.scss';

@@ -2,13 +2,13 @@ import { useParams } from "react-router-dom";
 
 import content from "../datas/data.json";
 
-import Header from "../components/header/header";
-import Host from "../components/host/host";
-import Rating from "../components/rate/rate";
-import Carousel from "../components/carousel/carousel";
-import Tags from "../components/tag/tag";
-import Collapse from "../components/collapse/collapse";
-import Footer from "../components/footer/footer";
+import Header from "../components/header/index";
+import Host from "../components/host/index";
+import Rating from "../components/rate/index";
+import Carousel from "../components/carousel/index";
+import Tags from "../components/tag/index";
+import Collapse from "../components/collapse/index";
+import Footer from "../components/footer/index";
 import s from "../style/_pages/_Product.module.scss";
 import { useMemo } from "react";
 

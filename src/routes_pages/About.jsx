@@ -1,10 +1,10 @@
 import { useState } from "react";
-import Banner from "../components/banner/banner";
+import Banner from "../components/banner/index";
 import content from "../datas/communication";
-import Collapse from "../components/collapse/collapse";
+import Collapse from "../components/collapse/index";
 import imageBanner from "../img/aboutbannerDesktop.png";
-import Header from "../components/header/header";
-import Footer from "../components/footer/footer";
+import Header from "../components/header/index";
+import Footer from "../components/footer/index";
 import s from "../style/_pages/_About.module.scss";
 
 function About() {
